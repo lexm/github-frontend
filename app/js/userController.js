@@ -2,8 +2,6 @@ module.exports = (app, userRoute) => {
 
   app.controller('UserController', ['$http', function($http) {
     this.userData = {};
-    this.followersData = {};
-    this.followingData = {};
     this.getUserData = function() {
       $http.get(userRoute)
       .then((res) => {
@@ -11,9 +9,9 @@ module.exports = (app, userRoute) => {
         this.avatarUrl = res.data.avatar_url;
         this.starredUrl = res.data.starred_url;
         $http.get(this.starredUrl)
-        .then((strrdRes) => {
-          thisUser.starredData = strrdRes.data;
-        });
+        // .then((strrdRes) => {
+        //   thisUser.starredData = strrdRes.data;
+        // });
         this.followers = res.data.followers;
         this.followersUrl = res.data.followers_url;
         var thisUser = this;

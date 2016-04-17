@@ -7,31 +7,10 @@
 <body data-ng-app="UserApp">
   <main>
     <section data-ng-init="userCtrl.getUserData()" data-ng-controller="UserController as userCtrl">
-      <img src="{{userCtrl.avatarUrl}}" alt="Avatar" />
-      {{userCtrl.starredUrl}}
-      {{userCtrl.followers}}
-      {{userCtrl.followersUrl}}
-      {{userCtrl.following}}
-      {{userCtrl.followingUrl}}
-      {{userCtrl.reposUrl}}
-      <div data-ng-init="flwrCtrl.getFollowerData()" data-ng-controller="FollowerController as flwrCtrl">
-        <h2>Followers</h2>
-        <li data-ng-repeat="follower in flwrCtrl.followerData">
-          {{follower}}
-        </li>
-      </div>
-      <div data-ng-init="flwngCtrl.getFollowingData()" data-ng-controller="FollowingController as flwngCtrl">
-        <h2>Following</h2>
-        <li data-ng-repeat="following in flwngCtrl.followingData">
-          {{following}}
-        </li>
-      </div>
-      <div data-ng-init="repoCtrl.getRepoData()" data-ng-controller="RepoController as repoCtrl">
-        <h2>Repos</h2>
-        <li data-ng-repeat="repo in repoCtrl.repoData">
-          {{repo}}
-        </li>
-      </div>
+      <list-user-info></list-user-info>
+      <list-followers></list-followers>
+      <list-followed></list-followed>
+      <list-repos></list-repos>
     </section>
   </main>
   <script src="./bundle.js" type="text/javascript"></script>

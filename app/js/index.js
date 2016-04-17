@@ -1,5 +1,8 @@
 var angular = require('angular');
-var app = angular.module('UserApp', []);
+var directives = require('./directives');
+
+var app = angular.module('UserApp', ['directives']);
+// var app = angular.module('UserApp', []);
 
 const baseUserRoute = 'http://api.github.com/users';
 const currUser = 'lexm';
