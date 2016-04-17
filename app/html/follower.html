@@ -1,6 +1,8 @@
 <div data-ng-init="flwrCtrl.getFollowerData()" data-ng-controller="FollowerController as flwrCtrl">
   <h2>Followers</h2>
   <li data-ng-repeat="follower in flwrCtrl.followerData">
-    {{follower}}
+    <p>{{follower.login}}</p>
+    <img src="{{follower.avatar_url}}" alt="avatar" />
+    <p>URL: <a href="{{follower.url}}">{{follower.url}}</a></p>
   </li>
 </div>

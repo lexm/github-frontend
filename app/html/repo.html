@@ -2,5 +2,11 @@
   <h2>Repos</h2>
   <li data-ng-repeat="repo in repoCtrl.repoData">
     {{repo}}
+    <p>
+      Name: {{repo.name}}
+    </p>
+    <p>
+      Last updated: {{repo.updated_at | date}}
+    </p>
   </li>
 </div>
