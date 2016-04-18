@@ -73,8 +73,8 @@ gulp.task('build:html', function() {
 });
 
 gulp.task('build:css', function() {
-  gulp.src('app/*.css')
-  .pipe(gulp.dest('public/'));
+  gulp.src('app/css/*.css')
+  .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('build:js', function() {
