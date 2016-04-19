@@ -28,4 +28,12 @@
       templateUrl: '../html/user.html'
     }
   })
+
+  app.directive('listStarred', function() {
+    return {
+      restrict: 'E',
+      templateUrl: '../html/starred.html'
+    }
+  });
+
 })()

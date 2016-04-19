@@ -12,3 +12,4 @@ require('./userController')(app, userRoute);
 require('./followerController')(app, userRoute);
 require('./followingController')(app, userRoute);
 require('./repoController')(app, userRoute);
+require('./starController')(app, userRoute);

@@ -1,6 +1,14 @@
 <div data-ng-init="repoCtrl.getRepoData()" data-ng-controller="RepoController as repoCtrl">
   <h2>Repos</h2>
   <li data-ng-repeat="repo in repoCtrl.repoData">
-    {{repo}}
+    <p>
+      Name: {{repo.name}}
+    </p>
+    <p>Owner: {{repo.owner.login}}</p>
+    <p>Description: {{repo.description}}</p>
+    <p>URL: <a href="{{repo.url}}">{{repo.url}}</a></p>
+    <p>
+      Last updated: {{repo.updated_at | date}}
+    </p>
   </li>
 </div>
