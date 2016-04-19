@@ -4,6 +4,8 @@
     <!-- <p>star: {{star}}</p> -->
     <p>name: {{star.name}}</p>
     <p>owner: {{star.owner.login}}</p>
+    <p>Description: {{repo.description}}</p>
     <p>URL: <a href="{{star.url}}">{{star.url}}</a></p>
+    <p>Last updated: {{repo.updated_at | date}}</p>
   </li>
 </div>
