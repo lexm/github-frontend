@@ -1,0 +1,9 @@
+<div data-ng-init="starCtrl.getStarData()" data-ng-controller="StarController as starCtrl">
+  <h2>Stars</h2>
+  <li data-ng-repeat="star in starCtrl.starData">
+    <!-- <p>star: {{star}}</p> -->
+    <p>name: {{star.name}}</p>
+    <p>owner: {{star.owner.login}}</p>
+    <p>URL: <a href="{{star.url}}">{{star.url}}</a></p>
+  </li>
+</div>
