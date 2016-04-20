@@ -1,1 +1,7 @@
-<img src="{{userCtrl.avatarUrl}}" alt="avatar" class="avatar" />
+<section data-ng-init="userCtrl.getUserData()">
+  <img src="{{userCtrl.avatarUrl}}" alt="avatar" class="avatar" />
+  <list-starred></list-starred>
+  <list-followers></list-followers>
+  <list-followed></list-followed>
+  <list-repos></list-repos>
+</section>
